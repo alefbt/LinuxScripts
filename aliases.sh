@@ -1,5 +1,8 @@
-# Aliases 
-# Thanks to Dave Smith (Linked In)
+# 
+# Aliases Taken from LinkedIn - http://lnkd.in/dsBrU9F
+# You may contribute more 
+
+# Thanks to Dave Smith
 alias cls='clear' #kinda obvious, but I'm mistyping it regularly
 alias getdbs='nohup lftp -f ~/.lftp/get-db-backups.script &' #pulls database backups off a remote server
 alias df='df -h' 
@@ -11,8 +14,7 @@ alias maillist='postqueue -p' # lists and removed mails stuck in the queue - gen
 
 alias ut2004='ssh -p22022 utadmin@ut.myserver.nl' 
 alias ut2k4='ut2004' 
-alias ut99='ssh -p22022 utadmin@ut.myotherserver.uk' 
-#(I run a few Unreal Tournament servers - but these server aliases have been moved into ".ssh/config" now so I don't use these aliases as much)
+alias ut99='ssh -p22022 utadmin@ut.myotherserver.uk' # I run a few Unreal Tournament servers - but these server aliases have been moved into ".ssh/config" now so I don't use these aliases as much
 
 # Thanks to Eric Ross
 alias msg='tail -20 /var/log/messages' 

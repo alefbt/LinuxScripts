@@ -1,2 +1,7 @@
+# 
+# Aliases Taken from LinkedIn - http://lnkd.in/dsBrU9F
+# You may contribute more 
+
 # Thanks to Denis Kovalev
+# CTRL-L but leave the cursor at the bottom of the screen
 "\C-W": "printf "\\33[2J"\n" 
