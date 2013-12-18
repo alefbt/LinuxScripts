@@ -1,0 +1,2 @@
+# Thanks to Denis Kovalev
+"\C-W": "printf "\\33[2J"\n" 
