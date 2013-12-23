@@ -2,6 +2,23 @@
 # Aliases Taken from LinkedIn - http://lnkd.in/dsBrU9F
 # You may contribute more 
 
+# ######### FUNCTIONS ###############################
+
+# Thanks to Eric Ross
+pss() { echo; ps auxwww | egrep "$@|^USER" | grep -v grep;}
+
+# Thanks to Denis Kovalev
+cls() { printf "\33[2J";}
+
+# Thanks to Tomasz Klapinski & Carl Reynolds
+mkcd() { /bin/mkdir $* && /usr/bin/cd "${@: -1}" ; }
+rmk() { [ $# -eq 1 ] && sed -i $1d /home/[username]/.ssh/known_hosts ; } 
+
+# Thanks to David A. Desrosiers
+function duf { 
+du -sk "$@" | sort -n | while read size fname; do for unit in k M G T P E Z Y; do if [ $size -lt 1024 ]; then echo -e "${size}${unit}\t${fname}"; break; fi; size=$((size/1024)); done; done 
+} 
+# ########## ALIASES ################################
 # Thanks to Dave Smith
 alias cls='clear' #kinda obvious, but I'm mistyping it regularly
 alias getdbs='nohup lftp -f ~/.lftp/get-db-backups.script &' #pulls database backups off a remote server
@@ -46,3 +63,29 @@ alias la='ls -la --color'
 alias rm='rm -i' 
 alias cp='cp -i' 
 alias mv='mv -i' 
+
+# Thanks to Tomasz Klapinski
+alias hog="du -hs * | sort -n | egrep '(^[[:digit:]]{1,}.?[[:digit:]]?G)|(^[[:digit:]]{3,}M)'"
+
+# Thanks to Jonathan Roberts
+alias hist="history | grep $1"
+
+# Thanks to Daniel Uland
+alias cdc='cd; clear' #cd to home dir and clear screen
+
+# Thanks to Ankur Jain
+alias search='grep --color' 
+alias '..'='cd..' 
+alias x='chmod +x'
+
+# Thanks to David A. Desrosiers
+alias indent='indent -bap -bad -bli0 -brs -lp -i4 -cli2 -cbi0 -kr' 
+alias ssh='ssh -2 -X -P -C -c 3DES' 
+alias 7za='7za a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on' 
+alias rms='shred -v -n50 -u' 
+
+# Avoids VMware Workstation bug on Linux 
+alias vmware="VMWARE_USE_SHIPPED_GTK=yes vmware"
+
+
+
