@@ -80,7 +80,7 @@ alias x='chmod +x'
 
 # Thanks to David A. Desrosiers
 alias indent='indent -bap -bad -bli0 -brs -lp -i4 -cli2 -cbi0 -kr' 
-alias ssh='ssh -2 -X -P -C -c 3DES' 
+# alias ssh='ssh -2 -X -P -C -c 3DES' 
 alias 7za='7za a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on' 
 alias rms='shred -v -n50 -u' 
 
